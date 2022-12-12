@@ -43,11 +43,12 @@ import scope from '../images/scope.png';
 import scopeOk from '../images/scope-ok.png';
 
 import serviceWorkerSchema from '../images/service-worker-schema.png';
-
+import workboxLogs from '../images/workbox-logs.avif'
 
 import fitstInstall from "../video/sw-firstinstall.mp4"
 import secondInstall from "../video/sw-second-install.mp4"
 
+import uncleBen from '../images/uncleben.webp'
 
 const formidableLogo =
   'https://avatars2.githubusercontent.com/u/5078602?s=280&v=4';
@@ -83,7 +84,7 @@ console.log(img);
 
 const Presentation = () => (
   <Deck theme={theme} template={template}>
-    <Slide       backgroundColor="tertiary"
+    <Slide      
       backgroundImage={`url(${img})`}
 
       >
@@ -209,7 +210,6 @@ const Presentation = () => (
     </Slide>
 
     <Slide>
-      TODO: highlight range + style + add sw phases
       <FlexBox  mb="1em" >
     <CodePane language="javascript">
       {`     
@@ -267,6 +267,11 @@ self.addEventListener("fetch", (evt) => {
 </Slide>
 
 <Slide>
+      <Image src={cacheFirst} />
+    </Slide>
+
+<Slide>
+
 <CodePane language="javascript">
       {`
 // sw.js
@@ -290,11 +295,9 @@ this.addEventListener('fetch', function(event) {
 </Slide>
 
     <Slide>
-        <Image src={workboxLogo} />
-    </Slide>
-
-    <Slide>
-      <Image src={cacheFirst} />
+    <FlexBox height="100%" alignItems="center" justifyContent="center">
+                <Image src={workboxLogo} />
+      </FlexBox>
     </Slide>
 
     <Slide>
@@ -345,17 +348,24 @@ setCatchHandler(event => {
       </UnorderedList>
     </Slide>
 
+    <Slide  backgroundImage={`url(${uncleBen})`} >
+      <Appear><Heading>Merci !</Heading></Appear>
+    </Slide>
+
     <Slide>
       <Heading>Pour aller plus loin</Heading>
       <UnorderedList>
         <ListItem>
-          https://developer.chrome.com/docs/workbox/
+          <Link href="https://developer.chrome.com/docs/workbox/" >https://developer.chrome.com/docs/workbox/</Link>
         </ListItem>
         <ListItem>
-          articles blog ITN
+          <Link href="https://blog.itnetwork.fr/blog-post/2022/01/17/application-web-hors-ligne.html" >https://blog.itnetwork.fr/blog-post/2022/01/17/application-web-hors-ligne.html</Link>
+        </ListItem  >
+        <ListItem>
+        <Link href="https://developer.mozilla.org/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers" >https://developer.mozilla.org/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers</Link>
         </ListItem>
         <ListItem>
-          lien MDN sw
+        <Link href="https://web.dev/learn/pwa/service-workers/" >https://web.dev/learn/pwa/service-workers/</Link>
         </ListItem>
         </UnorderedList>
     </Slide>

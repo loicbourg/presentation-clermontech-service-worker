@@ -46,7 +46,7 @@ module.exports = {
         use: [babelLoader, require.resolve('spectacle-mdx-loader')]
       },
       {
-        test: /\.(png|svg|jpg|gif|mp4|avif)$/,
+        test: /\.(png|svg|jpg|gif|mp4|avif|webp)$/,
         use: [require.resolve('file-loader')]
       }
     ]
