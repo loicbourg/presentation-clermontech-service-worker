@@ -123,7 +123,7 @@ const Presentation = () => (
         <ListItem>Ajouté en 2015</ListItem>
       </Appear>
       <Appear>
-        <ListItem>Donne la possibilité d'intercepter des requétes provenant de la page courante</ListItem>
+        <ListItem>Donne la possibilité d'intercepter des requetes provenant de la page courante</ListItem>
       </Appear>
       <Appear>
         <ListItem>Un des aspects des progressive web app (gestion du hors ligne)</ListItem>
@@ -195,14 +195,14 @@ const Presentation = () => (
     </Slide>
 
     <Slide>
-      <video controls muted=""><source src={fitstInstall} type="video/mp4"/></video>
+      <video height="95%" controls muted=""><source src={fitstInstall} type="video/mp4"/></video>
       <Notes>
       bien indiquer que c'est fonctionel au rechargement (sauf client claim)
       </Notes>
     </Slide>
 
     <Slide>
-      <video controls loop muted=""><source src={secondInstall} type="video/mp4"/></video>
+      <video height="95%" controls loop muted=""><source src={secondInstall} type="video/mp4"/></video>
       <Notes>
       NOTE: bien indiquer que c'est fonctionel lorsque plus aucun onglet du navigateur n'est sur le site (sauf skeep waiting)
 
